@@ -27,15 +27,17 @@ end
 
 def parse_character_movies(films_hash)
   films_array = films_hash.map do |film|
-    puts film 
+    film['title']
   end
-  "Goodbye!"
 end
 
 def show_character_movies(character)
   films_hash = get_character_movies_from_api(character)
   films_array = parse_character_movies(films_hash)
-
+  films_array.each do |film|
+    puts film
+  end
+  "Thank you for using the Star Wars API!"
 end
 
 
