@@ -26,6 +26,9 @@ end
 end
 
 def parse_character_movies(films_hash)
+  films_hash.each do |film| 
+    puts film['title']
+  end
 end
 
 def show_character_movies(character)
