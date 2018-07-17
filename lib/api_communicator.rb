@@ -26,16 +26,15 @@ end
 end
 
 def parse_character_movies(films_hash)
-  films_hash.map do |film|
-    film['title']
+  films_array = films_hash.map do |film|
+    puts film 
   end
+  "Goodbye!"
 end
 
 def show_character_movies(character)
-  get_character_movies_from_api(character)
-    .map{|url|JSON.parse(RestClient.get(url))}
-    .map{|movie| movie['title']}
-    .each{|x| puts x}
+  films_hash = get_character_movies_from_api(character)
+  films_array = parse_character_movies(films_hash)
 
 end
 
