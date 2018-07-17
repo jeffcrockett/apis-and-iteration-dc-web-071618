@@ -26,8 +26,8 @@ end
 end
 
 def parse_character_movies(films_hash)
-  films_hash.each do |film| 
-    puts film['title']
+  films_hash.map do |film|
+    film['title']
   end
 end
 
