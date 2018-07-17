@@ -36,7 +36,7 @@ def show_character_movies(character)
   films_array.each do |film|
     puts film
   end
-  "Thank you for using the Star Wars API!"
+  puts "Thank you for using the Star Wars API!"
 end
 
 
