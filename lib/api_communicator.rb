@@ -23,7 +23,6 @@ end
   # this collection will be the argument given to `parse_character_movies`
   #  and that method will do some nice presentation stuff: puts out a list
   #  of movies by title. play around with puts out other info about a given film.
-end
 
 def parse_character_movies(films_hash)
   films_array = films_hash.map do |film|
