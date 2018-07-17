@@ -7,17 +7,12 @@ def get_character_movies_from_api(character)
   all_characters = RestClient.get('http://www.swapi.co/api/people/')
   character_hash = JSON.parse(all_characters)
   character_hash['results'].each do |item|
-    if item['name'] == character 
+    if item['name'] == character
       return item['films']
     end
   end
 end
-  # all_characters = character_hash['results'].map do |x| x['name'] end
-  # all_characters.each do |character|
-  #   character_hash['results'].each do |item|
-  #   puts item['films'] if item['actor'] == character 
-  #   end
-  # end
+
 
   # iterate over the character hash to find the collection of `films` for the given
   #   `character`
